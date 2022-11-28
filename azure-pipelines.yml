@@ -17,6 +17,11 @@ steps:
 - task: DotNetCoreCLI@2
   inputs:
     command: 'build'
+    projects: '/temp/user1'
+    arguments: '--race'
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'build'
     arguments: 'args1'
 
 - script: |
